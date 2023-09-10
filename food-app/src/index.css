@@ -1,13 +1,116 @@
-body {
+/* Import Google Fonts (Lilita One, Oswald, Roboto) */
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Common CSS */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Root Variables */
+:root {
+  /* Fonts Family */
+  --roboto-font: "Roboto", sans-serif;
+  --lilita-font: "Lilita One", cursive;
+  --oswald-font: "Oswald", sans-serif;
+
+  /* Colors */
+  --light-black: #333;
+  --light-white: #f7f7f7;
+  --light-red: #e3000e;
+  --light-grey: #f6f9fa;
+  --light-grey-2: #dddddd;
+  --white: #fff;
+  --yellow: #f7be27;
+  --grey: #757575;
+  --brown: #6f5e4d;
+  --bg-coffee: #642f21;
+}
+
+body,
+html {
+  font-size: 1rem;
+  font-family: var(--roboto-font);
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  body,
+  html {
+    font-size: 0.875rem;
+  }
+}
+
+/* Headline Tag */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--oswald-font);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+p {
+  font-size: 16px;
+}
+
+/* Achor Tag */
+a {
+  color: var(--light-black);
+  text-decoration: none;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+/* Common Button */
+.order_now {
+  color: var(--light-black);
+  background: var(--yellow);
+  border-color: var(--yellow);
+  padding: 15px 38px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: var(--oswald-font);
+  vertical-align: middle;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.order_now:hover,
+.order_now:focus {
+  color: var(--white);
+  background: transparent;
+  border-color: var(--white);
+}
+
+.btn_red {
+  color: var(--white);
+  background: var(--light-red);
+  border-color: var(--light-red);
+}
+.btn_red:hover,
+.btn_red:focus {
+  color: var(--light-red);
+  background: transparent;
+  border-color: var(--light-red);
 }

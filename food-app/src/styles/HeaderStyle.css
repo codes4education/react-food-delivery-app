@@ -1,0 +1,108 @@
+/* Header CSS */
+header .navbar {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+header .navbar.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--white);
+  -webkit-transition: all 15ms ease-in-out;
+  -moz-transition: all 15ms ease-in-out;
+  -o-transition: all 15ms ease-in-out;
+  -ms-transition: all 15ms ease-in-out;
+  transition: all 15ms ease-in-out;
+  animation-name: stickyTransition;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+  -moz-box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+  box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+}
+@keyframes stickyTransition {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+header .logo img {
+  width: auto;
+  max-width: inherit;
+  max-height: 80px;
+}
+header .nav-link {
+  display: inline-flex;
+  justify-content: center;
+  color: var(--white);
+  padding: 0 1rem !important;
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-family: var(--oswald-font);
+  text-transform: uppercase;
+  -webkit-transition: all 15ms ease-in-out;
+  -ms-transition: all 15ms ease-in-out;
+  -o-transition: all 15ms ease-in-out;
+  -moz-transition: all 15ms ease-in-out;
+  transition: all 15ms ease-in-out;
+}
+
+header .sticky .nav-link {
+  color: var(--light-black);
+}
+header .nav-link:hover {
+  color: var(--yellow);
+}
+header .cart {
+  position: relative;
+  top: -0.4375rem;
+}
+header .roundpoint {
+  width: 16px;
+  height: 16px;
+  background: var(--light-red);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 11.2px;
+  line-height: 16px;
+  text-align: center;
+  font-style: normal;
+  position: absolute;
+  top: 3.2px;
+  right: -8px;
+}
+
+/* Media Query CSS */
+
+@media (max-width: 992px) {
+  header .navbar {
+    background-color: var(--white);
+  }
+  header .navbar-toggler {
+    border: none;
+  }
+  header .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  header .navbar-toggler-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  header .nav-link {
+    color: var(--light-black);
+    padding: 1rem !important;
+  }
+}
